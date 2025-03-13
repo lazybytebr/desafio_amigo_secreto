@@ -34,3 +34,16 @@ function listarAmigos()
         lista.appendChild(elemento);
     }
 }
+
+function sortearAmigo()
+{
+    if( amigos.length > 0 )
+    {
+        let indiceAleatorio = parseInt( Math.floor( Math.random() * amigos.length  ) );
+        
+        let elemento = document.createElement('li');
+        elemento.innerText = amigos[indiceAleatorio];
+        let resultado = document.querySelector('#resultado');
+        resultado.appendChild(elemento);
+    }
+}
